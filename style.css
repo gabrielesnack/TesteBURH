@@ -3,10 +3,7 @@
 	padding:0;
 }
 
-html,body{
-    width: 100%;
-    height:100%;
-}
+/*MENU*/
 
 .Menu{
 	position: fixed;
@@ -17,12 +14,17 @@ html,body{
 	justify-content: space-between;
 }
 
+
+/*CANTO SUPERIOR ESQUERDO*/
+
 .Menu #logoMenu{
 	width: 83.12px;
 	height: 19.47px;
 	margin-top: 16.6px;
 	margin-left: 42.52px;
 }
+
+/*USUARIO CANTO SUPERIOR DIREITO*/
 
 .Menu .contentUser{
 	border-radius: 100%;
@@ -31,4 +33,36 @@ html,body{
 	height: 48px;
 	margin-top: 4px;
 	margin-right: 48px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
+
+.Menu .contentUser i:first-child,.Menu .contentUser .groupItem i:first-child{
+	color: #1F8CEB;
+}
+
+.Menu .contentUser i:first-child{
+	width: 16px;
+	height: 18px;
+}
+
+.Menu .contentUser .groupItem{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 1px;
+	margin-right: -2px;
+}
+
+.Menu .contentUser .groupItem i:first-child{
+	font-size: 10px;
+	margin-top: 15px;
+	margin-bottom: -3px; 
+}
+
+.Menu .contentUser .groupItem i:last-child{
+	font-size: 12px;
+	color: #4AD991;
+}
+
