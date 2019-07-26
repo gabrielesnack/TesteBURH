@@ -38,7 +38,7 @@
 	align-items: center;
 }
 
-.menu__user i:first-child,.menu__user__groupicon i:first-child{
+.menu__user i:first-child,.menu__user__groupicon i:first-child,.content__page__lista__item:nth-child(2) i{
 	color: #1F8CEB;
 }
 
@@ -104,7 +104,7 @@ main{
 	color: #707070;
 }
 
-.content__page__text{
+.content__page__text,.content__page__lista__item{
 	font-size: 14px;
 	line-height: 16pt;
 	margin-bottom: 16px;
@@ -115,9 +115,13 @@ main{
 
 .content__page__subtitle{
 	margin-top: 42px;
+	margin-bottom: 6px;
 	font-size: 18px;
 	font-family: Montserrat;
 	font-weight: 600;
 	color: #707070;
+}
+.content__page__lista{
+	margin-left: 20px;
 }
 
