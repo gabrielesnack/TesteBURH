@@ -66,3 +66,57 @@
 	color: #4AD991;
 }
 
+/*CONTEUDO DA PAGINA*/
+main{
+	width: 1366px;
+	height: 1202px;
+	background-color: #F8FAFC;
+	display: flex;
+}
+
+.content__page{
+	width: 711.04px;
+	height: 1202px;
+	margin-top: 176px;
+	margin-left: 33px;	
+}
+
+.content__page__title{
+	font-size: 36px;
+	margin-bottom: 35px;
+	font-family: Montserrat;
+	font-weight: 600;
+	color: #707070;
+}
+
+.content__page__title:before{
+	content: 'Olá, ';
+}
+
+.content__page__title:after{
+	content: '.';
+}
+
+.content__page__title:before,.content__page__title:after{
+	font-size: 36px;
+	font-family: Montserrat;
+	font-weight: 300;
+	color: #707070;
+}
+
+.content_page_text{
+	font-size: 14px;
+	line-height: 16pt;
+	margin-bottom: 16px;
+	font-family: Montserrat;
+	font-weight: normal;
+	color: #707070;
+}
+
+.content_page_subtitle{
+	margin-top: 42px;
+	font-size: 18px;
+	font-family: Montserrat;
+	font-weight: 600;
+	color: #707070;
+}
