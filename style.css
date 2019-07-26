@@ -104,7 +104,7 @@ main{
 	color: #707070;
 }
 
-.content_page_text{
+.content__page__text{
 	font-size: 14px;
 	line-height: 16pt;
 	margin-bottom: 16px;
@@ -113,10 +113,11 @@ main{
 	color: #707070;
 }
 
-.content_page_subtitle{
+.content__page__subtitle{
 	margin-top: 42px;
 	font-size: 18px;
 	font-family: Montserrat;
 	font-weight: 600;
 	color: #707070;
 }
+
