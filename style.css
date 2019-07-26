@@ -5,7 +5,7 @@
 
 /*MENU*/
 
-.Menu{
+.menu{
 	position: fixed;
 	width: 1366px;
 	height: 55px;
@@ -17,7 +17,7 @@
 
 /*CANTO SUPERIOR ESQUERDO*/
 
-.Menu #logoMenu{
+.menu__logo{
 	width: 83.12px;
 	height: 19.47px;
 	margin-top: 16.6px;
@@ -26,7 +26,7 @@
 
 /*USUARIO CANTO SUPERIOR DIREITO*/
 
-.Menu .contentUser{
+.menu__user{
 	border-radius: 100%;
 	background-color: #F8FAFC;
 	width: 48px;
@@ -38,16 +38,16 @@
 	align-items: center;
 }
 
-.Menu .contentUser i:first-child,.Menu .contentUser .groupItem i:first-child{
+.menu__user i:first-child,.menu__user__groupicon i:first-child{
 	color: #1F8CEB;
 }
 
-.Menu .contentUser i:first-child{
+.menu__user i:first-child{
 	width: 16px;
 	height: 18px;
 }
 
-.Menu .contentUser .groupItem{
+.menu__user__groupicon{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -55,13 +55,13 @@
 	margin-right: -2px;
 }
 
-.Menu .contentUser .groupItem i:first-child{
+.menu__user__groupicon i:first-child{
 	font-size: 10px;
 	margin-top: 15px;
 	margin-bottom: -3px; 
 }
 
-.Menu .contentUser .groupItem i:last-child{
+.menu__user__groupicon i:last-child{
 	font-size: 12px;
 	color: #4AD991;
 }
