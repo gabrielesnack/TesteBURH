@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+}
+
+.Menu{
+	position: fixed;
+	width: 1366px;
+	height: 55px;
+	background-color: #1F8CEB;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Menu #logoMenu{
+	width: 83.12px;
+	height: 19.47px;
+	margin-top: 16.6px;
+	margin-left: 42.52px;
+}
+
+.Menu .contentUser{
+	border-radius: 100%;
+	background-color: #F8FAFC;
+	width: 48px;
+	height: 48px;
+	margin-top: 4px;
+	margin-right: 48px;
+}
