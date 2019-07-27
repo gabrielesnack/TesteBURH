@@ -145,10 +145,11 @@ main{
 .content-box{
 	width: 621.96;
 	margin-top: 176px;
-	margin-right: 34px;	
+	margin-right: 495px; /*soma da margin lateral do contentbox que é 34px de acordo com prototipo + largura do objeto 461px+34px= 495px;*/
 }
 
 .content-box__boxfav{
+	position: fixed;
 	width: 461px;
 	height: 516px;
 	background-color: #FFFFFF;
@@ -158,7 +159,7 @@ main{
 .content-box__boxfav__header{
 	display: flex;
 	justify-content: space-between;
-	width: 461px;
+	width: 461px;  /* largura do objeto*/
 	height: 96px;
 }
 
