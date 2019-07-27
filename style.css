@@ -7,6 +7,7 @@
 
 .menu{
 	position: fixed;
+	z-index: 10;
 	width: 1366px;
 	height: 55px;
 	background-color: #1F8CEB;
@@ -72,6 +73,7 @@ main{
 	height: 1202px;
 	background-color: #F8FAFC;
 	display: flex;
+	justify-content: space-between;
 }
 
 .content__page{
@@ -136,4 +138,106 @@ main{
 
 .content__page__text:nth-of-type(5){
 	margin-top: 20px;
+}
+
+/*ASIDE - BOX FAV*/
+
+.content-box{
+	width: 621.96;
+	margin-top: 176px;
+	margin-right: 34px;	
+}
+
+.content-box__boxfav{
+	width: 461px;
+	height: 516px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.04);
+}
+
+.content-box__boxfav__header{
+	display: flex;
+	justify-content: space-between;
+	width: 461px;
+	height: 96px;
+}
+
+.content-box__boxfav__header-title{
+	margin-top: 24px;
+	margin-left: 24px;
+	font-size: 24px;
+	font-weight: 600;
+	font-family: Montserrat;
+	color: #878787;
+}
+
+.content-box__boxfav__header-group-search{
+	width: 207.5px;
+	height: 41px;
+	margin-right: 23px;
+	margin-top: 20px;
+	border: 1px solid #D6D9DA;
+	border-radius: 3px;
+}
+
+.content-box__boxfav__header-group-search::placeholder{
+	padding-left: 14.04px;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: Montserrat;
+	color: #D0D3D4;
+}
+
+.content-box__boxfav_items{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.content-box__boxfav__header-group i {
+	position: absolute;
+	margin-top: -29px;
+	margin-left: 175px;
+	color: #D6D9DA;
+}
+
+.content-box__boxfav_items li{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 413px;
+	height: 58px;
+	margin-left: 24px; 
+	margin-right: 24px;
+}
+
+.content-box__boxfav_items li:hover{
+	background-color: rgba(242, 242, 242, 0.5);
+}
+
+.content-box__boxfav_items-group{
+	display: flex;
+	flex-direction: column;
+}
+
+.content-box__boxfav_items-group-title,.content-box__boxfav_items-group-subtitle{
+	margin-left: 20px;
+	font-family: Montserrat;
+	color: #828282;
+}
+
+.content-box__boxfav_items-group-title{
+	font-size: 16px;
+	font-weight: 600;	
+}
+
+.content-box__boxfav_items-group-subtitle{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.content-box__boxfav_items li i{
+	margin-right: 19px;
+	color: #EFD358;
+	/*background-color: #EFD358;*/
 }
