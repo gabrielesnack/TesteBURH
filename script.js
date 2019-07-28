@@ -1,4 +1,45 @@
-			// Box Stars set and unset
+			// MENU NAV USER AND SETTINGS
+
+const btnmenu = document.querySelector('.menu__user'); //botão menu
+const btnstatus = document.querySelectorAll('.navigation-menu-status-text'); //botao de status
+const checkstatus = document.querySelectorAll('.navigation-menu-status i'); //pegar status de cada botao
+const iconstatus = document.querySelectorAll('.menu__user__groupicon i')[1]; //pegar icone do status
+const telanav = document.querySelector('.navigation'); //pegar a tela de fora
+
+//clicou fora do menu-nav então fechar.
+telanav.addEventListener('click',()=>{
+	telanav.classList.toggle('active');
+});
+
+// TROCAR ICONE DE DISPONIVEL OU INDISPONIVEL
+btnstatus.forEach( (item,index) =>{
+	item.addEventListener('click', () => {
+		if(index == 0){
+			if(!checkstatus[1].classList.contains('fas','fa-check')){
+				checkstatus[3].classList.remove('fas','fa-check');
+				checkstatus[1].classList.add('fas','fa-check');
+				iconstatus.classList.remove('icon_stred');
+			}
+		}else{
+			if(!checkstatus[3].classList.contains('fas','fa-check')){
+				checkstatus[1].classList.remove('fas','fa-check');
+				checkstatus[3].classList.add('fas','fa-check');
+				iconstatus.classList.add('icon_stred');
+			}
+		}
+    });
+});
+
+//TROCAR CORES DO BOTAO MENU DE USUARIO E ABRIR NAVIGATION
+btnmenu.addEventListener('click', ()=>{
+	btnmenu.classList.toggle('menu-bg-blue');
+	document.querySelector('.navigation').classList.toggle('active');
+	document.querySelectorAll('.menu__user i')[0].classList.toggle('menu-user-white')
+	document.querySelectorAll('.menu__user__groupicon i')[0].classList.toggle('menu-user-white')
+})
+
+
+			// BOX STARS SET AND UNSET
 
 // Lista de Items e de Estrelas
 const listaFav = document.querySelectorAll('.content-box__boxfav_items li');
@@ -68,10 +109,12 @@ txtFilter.addEventListener('change', (evt) => {
 			}
 		}
 
+		// remove todos items
 		listaFav.forEach((item)=>{
 			item.classList.add("esconder__item");
 		});
 
+		//traz somente os items filtrados
 		posItems.forEach((item)=>{
 			listaFav[item].classList.remove("esconder__item");
 		});
