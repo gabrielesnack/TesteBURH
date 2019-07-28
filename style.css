@@ -202,7 +202,7 @@ main{
 	color: #D6D9DA;
 }
 
-.content-box__boxfav_items li{
+.content-box__boxfav_items-item{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -212,7 +212,7 @@ main{
 	margin-right: 24px;
 }
 
-.content-box__boxfav_items li:hover{
+.content-box__boxfav_items-item:hover{
 	background-color: rgba(242, 242, 242, 0.5);
 }
 
@@ -237,8 +237,14 @@ main{
 	font-weight: normal;
 }
 
-.content-box__boxfav_items li i{
+.content-box__boxfav_items-item i{
 	margin-right: 19px;
 	color: #EFD358;
 	/*background-color: #EFD358;*/
+}
+
+
+.esconder__item{
+	transition: all .4s;
+	display: none;
 }
