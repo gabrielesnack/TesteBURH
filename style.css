@@ -8,7 +8,7 @@
 .menu{
 	position: fixed;
 	z-index: 10;
-	width: 1366px;
+	width: 992px;
 	height: 55px;
 	background-color: #1F8CEB;
 	display: flex;
@@ -73,9 +73,9 @@
 	color: #E83333;
 }
 
-/*CONTEUDO DA PAGINA*/
+			/*CONTEUDO DA PAGINA*/
 main{
-	width: 1366px;
+	width: 992px;
 	height: 1202px;
 	background-color: #F8FAFC;
 	display: flex;
@@ -146,9 +146,10 @@ main{
 	margin-top: 20px;
 }
 
-/*ASIDE - BOX FAV*/
+			/*ASIDE - BOX FAV*/
 
 .content-box{
+	margin-left: 5%;
 	width: 621.96;
 	margin-top: 176px;
 	margin-right: 495px; /*soma da margin lateral do contentbox que é 34px de acordo com prototipo + largura do objeto 461px+34px= 495px;*/
@@ -262,7 +263,7 @@ main{
 	display: none;
 	z-index: 12;
 	position: absolute;
-	width: 1366px;
+	width: 992px;
 	height: 1147px;
 	background-color: rgba(4, 9, 16, 0.7);
 	margin-top: 55px;
@@ -376,4 +377,31 @@ i[class="fas fa-check"]{
 	margin-left: 21px;
 	margin-top: 18px;
 	margin-bottom: 5px;
+}
+
+
+@media only screen and (min-width: 992px) {
+	.menu{
+		width: 100%;
+	}
+	main{
+		width: 100%;
+	}
+	.navigation{
+		width: 100%;
+	}
+
+	.content-box{
+		/*margin-right: 0%;*/
+	}
+}
+
+@media only screen and (min-width: 1366px){
+	.content-box{
+		margin-right: 35%;
+		margin-left: 0;
+	}
+	.content__page{
+		margin-left: 5%;
+	}
 }
