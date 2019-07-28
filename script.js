@@ -55,7 +55,8 @@ listaFav.forEach( (item,index) =>{
 
 			// FILTER ITEMS IN BOX
 
-// Lista de elementos Titles e de SubTitles
+// Lista de elementos Titles e de SubTitles and nenhum item encontrado
+const noneSearch = document.querySelector('.content-box__boxfav_items-nenhum');
 const elementsTitles = document.querySelectorAll('.content-box__boxfav_items h1');
 const elementsSubTitles = document.querySelectorAll('.content-box__boxfav_items h2');
 
@@ -86,7 +87,13 @@ setInterval(() => {
 			listaFav.forEach((item,index)=>{
 				item.classList.add("esconder__item");
 			});
+			//mostrar que nenhuma busca foi encontrada
+			if(!noneSearch.classList.contains('mostrar__nitem'))
+				noneSearch.classList.add('mostrar__nitem');
 		}else{
+			//esconder que nenhuma busca foi encontrada
+			if(noneSearch.classList.contains('mostrar__nitem'))
+				noneSearch.classList.remove('mostrar__nitem');
 			// alert('pelo menos 1 item encontrado');
 
 			itemsFiltrados = filterTitle(txtFind);
