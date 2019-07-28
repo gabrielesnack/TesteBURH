@@ -55,7 +55,8 @@ listaFav.forEach( (item,index) =>{
 
 			// FILTER ITEMS IN BOX
 
-// Lista de elementos Titles e de SubTitles
+// Lista de elementos Titles e de SubTitles and nenhum item encontrado
+const noneSearch = document.querySelector('.content-box__boxfav_items-nenhum');
 const elementsTitles = document.querySelectorAll('.content-box__boxfav_items h1');
 const elementsSubTitles = document.querySelectorAll('.content-box__boxfav_items h2');
 
@@ -76,50 +77,56 @@ elementsSubTitles.forEach((item,index)=>{
 	itemsSubTitles.push(item.innerText);
 });
 
-
 //Caso ocorra a troca de texto armazene o texto e filtre.
-txtFilter.addEventListener('change', (evt) => {
-	txtFind = evt.target.value;
+setInterval(() => {
+	if (txtFind != txtFilter.value){
+		txtFind = txtFilter.value;
 
-	//nenhum item encontrado
-	if(filterTitle(txtFind).length == 0 && filterSubTitle(txtFind).length == 0){
-		listaFav.forEach((item,index)=>{
-			item.classList.add("esconder__item");
-		});
-	}else{
-		// alert('pelo menos 1 item encontrado');
+		//nenhum item encontrado
+		if(filterTitle(txtFind).length == 0 && filterSubTitle(txtFind).length == 0){
+			listaFav.forEach((item,index)=>{
+				item.classList.add("esconder__item");
+			});
+			//mostrar que nenhuma busca foi encontrada
+			if(!noneSearch.classList.contains('mostrar__nitem'))
+				noneSearch.classList.add('mostrar__nitem');
+		}else{
+			//esconder que nenhuma busca foi encontrada
+			if(noneSearch.classList.contains('mostrar__nitem'))
+				noneSearch.classList.remove('mostrar__nitem');
+			// alert('pelo menos 1 item encontrado');
 
-		itemsFiltrados = filterTitle(txtFind);
-		let posItems = [];
+			itemsFiltrados = filterTitle(txtFind);
+			let posItems = [];
 
-		// percorrer e verificar items via titulo
-		for (var i = 0; i < itemsFiltrados.length; i++) {
-			for (var j = 0; j < elementsTitles.length; j++) {
-				if(itemsFiltrados[i] == elementsTitles[j].innerText)
-					posItems.push(j);
+			// percorrer e verificar items via titulo
+			for (var i = 0; i < itemsFiltrados.length; i++) {
+				for (var j = 0; j < elementsTitles.length; j++) {
+					if(itemsFiltrados[i] == elementsTitles[j].innerText)
+						posItems.push(j);
+				}
 			}
-		}
 
-		// percorrer e verificar items via subtitulo
-		itemsFiltrados = filterSubTitle(txtFind);
-		for (var k = 0; k < itemsFiltrados.length; k++) {
-			for (var l = 0; l < elementsSubTitles.length; l++) {
-				if(itemsFiltrados[k] == elementsSubTitles[l].innerText)
-					posItems.push(l);
+			// percorrer e verificar items via subtitulo
+			itemsFiltrados = filterSubTitle(txtFind);
+			for (var k = 0; k < itemsFiltrados.length; k++) {
+				for (var l = 0; l < elementsSubTitles.length; l++) {
+					if(itemsFiltrados[k] == elementsSubTitles[l].innerText)
+						posItems.push(l);
+				}
 			}
-		}
 
-		// remove todos items
-		listaFav.forEach((item)=>{
-			item.classList.add("esconder__item");
-		});
+			// remove todos items
+			listaFav.forEach((item)=>{
+				item.classList.add("esconder__item");
+			});
 
-		//traz somente os items filtrados
-		posItems.forEach((item)=>{
-			listaFav[item].classList.remove("esconder__item");
-		});
-	}
-});
+			//traz somente os items filtrados
+			posItems.forEach((item)=>{
+				listaFav[item].classList.remove("esconder__item");
+			});
+		}}
+}, 10);
 
 
 // FILTRAR ITEMS POR TITULO

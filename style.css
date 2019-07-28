@@ -84,7 +84,7 @@ main{
 
 .content__page{
 	width: 711.04px;
-	margin-top: 176px;
+	margin-top: 20vh;
 	margin-left: 33px;	
 }
 
@@ -150,7 +150,7 @@ main{
 
 .content-box{
 	width: 621.96;
-	margin-top: 176px;
+	margin-top: 19vh;
 	margin-right: 495px; /*soma da margin lateral do contentbox que é 34px de acordo com prototipo + largura do objeto 461px+34px= 495px;*/
 }
 
@@ -206,6 +206,18 @@ main{
 	margin-top: -29px;
 	margin-left: 175px;
 	color: #D6D9DA;
+}
+
+.content-box__boxfav_items-nenhum{
+	display: none;
+	margin-top: 30px;
+	margin-left: 43px; 
+	font-family: Montserrat;
+	color: #828282;
+}
+
+.mostrar__nitem{
+	display: flex;
 }
 
 .content-box__boxfav_items-item{
