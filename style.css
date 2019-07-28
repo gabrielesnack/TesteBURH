@@ -37,6 +37,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	cursor: pointer;
 }
 
 .menu__user i[class="far fa-user"],.menu__user__groupicon i[class="fas fa-angle-down"],.content__page__lista__item:nth-child(2) i{
@@ -215,6 +216,7 @@ main{
 	height: 58px;
 	margin-left: 24px; 
 	margin-right: 24px;
+	cursor: pointer;
 }
 
 .content-box__boxfav_items-item:hover{
@@ -345,6 +347,7 @@ main{
 	font-size: 16px;
 	color: #707070;
 	margin-bottom: 20px;
+	cursor: pointer;
 }
 
 .navigation-menu-status .disp{
